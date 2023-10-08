@@ -1,0 +1,11 @@
+const path = require("node:path");
+
+// esto es igual a export default
+module.exports = {
+  config: path.resolve("src", "config", "config.js"), // de esta manera le decimos donde esta la ruta de config para la creacion de la base de datos y asi mismo las demas carpetas que se movieron
+  "models-path": path.resolve("src", "models"),
+  "seeders-path": path.resolve("src", "seeders"),
+  "migrations-path": path.resolve("src", "migrations"),
+};
+
+// el config no lleva comillar porque no tiene guion de lo contrario llevaria comillas como el resto
